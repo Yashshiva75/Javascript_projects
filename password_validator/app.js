@@ -1,4 +1,5 @@
-let end = '26 August 2024';
+let end = '30 August 2024';
+let setter = document.querySelector('#end-date').innerHTML = end
 
 function clock() {
     let date = new Date(end);
