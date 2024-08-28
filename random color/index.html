@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    
+    .container {
+        background-color: rgb(64, 117, 163);
+        padding: 10px;
+        margin-bottom: 10px;
+        height: 20vh;
+        width: 30vw;
+    }
+    
+    #btn {
+        width: 220px;
+        height: 30px;
+        border: 2px;
+        border-radius: 5px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <button id="btn">number</button>
+        <p class="num"></p>
+    </div>
+</body>
+<script>
+    btn = document.querySelector('#btn');
+    numb = document.querySelector('.num');
+    let num = () => {
+        const randomnumber = Math.floor(Math.random() * 16777215);
+        const randomcode = '#' + randomnumber.toString(16);
+        document.body.style.backgroundColor = randomcode;
+        document.querySelector('.num').innerHTML = randomcode;
+    };
+    btn.addEventListener('click', num);
+</script>
+
+</html>
